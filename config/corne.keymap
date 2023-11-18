@@ -11,6 +11,12 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        bkspc_combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <9 10>;
+            layers = <0>;
+        };
     };
 
     behaviors {
