@@ -17,6 +17,11 @@
             key-positions = <9 8>;
             layers = <0>;
         };
+
+        bckspc_kl {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <20 21>;
+        };
     };
 
     behaviors {
