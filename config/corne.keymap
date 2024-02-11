@@ -12,25 +12,9 @@
     combos {
         compatible = "zmk,combos";
 
-        bkspc_combo {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
-            layers = <0>;
-        };
-
         bckspc_kl {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
-        };
-
-        Spaces_RIGHT {
-            bindings = <&kp LC(RIGHT)>;
-            key-positions = <10 11>;
-        };
-
-        Spaces_LEFT {
-            bindings = <&kp RC(LEFT)>;
-            key-positions = <22 23>;
         };
     };
 
@@ -62,7 +46,7 @@
 &kp TAB    &kp Q  &kp W  &kp E      &kp R            &kp T        &kp Y              &kp U            &kp I          &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D      &kp F            &kp G        &kp H              &kp J            &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LGUI   &kp Z  &kp X  &kp C      &kp V            &kp B        &kp N              &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp DEL
-                         &kp LCTRL  &holdpref 1 ESC  &kp SPACE    &holdpref 2 ENTER  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+                         &kp LCTRL  &holdpref 2 ESC  &kp SPACE    &holdpref 3 ENTER  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
@@ -75,10 +59,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4         &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&trans     &kp F1  &kp F2  &kp F3    &mt LA(F4) F4  &kp F5       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &kp DEL
-&kp LSHFT  &trans  &trans  &trans    &trans         &trans       &trans    &trans    &trans    &trans     &trans  &trans
-                           &kp LGUI  &trans         &kp SPACE    &kp RET   &trans    &kp RALT
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4         &kp N5       &kp N6            &kp N7    &kp N8    &kp N9             &kp N0  &kp BSPC
+&trans     &kp F1  &kp F2  &kp F3    &mt LA(F4) F4  &kp F5       &kp LEFT          &kp DOWN  &kp UP    &kp RIGHT          &trans  &kp DEL
+&kp LSHFT  &trans  &trans  &trans    &trans         &trans       &kp LC(LG(LEFT))  &trans    &trans    &kp LC(LG(RIGHT))  &trans  &trans
+                           &kp LGUI  &trans         &kp SPACE    &kp RET           &trans    &kp RALT
             >;
         };
 
@@ -112,7 +96,7 @@
         compatible = "zmk,conditional-layers";
 
         Layer3 {
-            if-layers = <1 2>;
+            if-layers = <2 3>;
             then-layer = <3>;
         };
     };
